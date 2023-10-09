@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/menu_layout"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:baselineAligned="false"
+        tools:context=".mainMenu"
+        android:focusableInTouchMode="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registerInputButton"
+            android:id="@+id/registerInput"
+            android:onClick="addInput"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registerActivityButtonText"
+            android:id="@+id/registerActivity"
+            android:onClick="addActivity"
+            android:layout_marginTop="34dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registerMeasurementButtonText"
+            android:id="@+id/registerMeasurement"
+            android:onClick="addMeasurement"
+            android:layout_marginTop="34dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/manageDataButtonText"
+            android:id="@+id/manageData"
+            android:onClick="manageData"
+            android:layout_marginTop="34dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/settingsButtonText"
+            android:id="@+id/settings"
+            android:onClick="settings"
+            android:layout_marginTop="34dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/logoutButtonText"
+                android:id="@+id/logout"
+                android:onClick="doLogout"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="34dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorWhite" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/notificationsButton"
+                android:onClick="notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:src="@drawable/alert_icon"
+                app:layout_anchor="@id/logout"
+                app:layout_anchorGravity="bottom|right|end"
+                app:elevation="4dp"
+                app:backgroundTint="#FF0000"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</ScrollView>

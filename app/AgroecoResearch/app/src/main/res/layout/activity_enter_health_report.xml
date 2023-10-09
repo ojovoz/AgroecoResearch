@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentScrollView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/measurementLayout"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".enterHealthReport"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/emptyString"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/fieldPlotSampleText"
+            android:textSize="20dp"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterHealthReportText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterHealthReportText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:shrinkColumns="0,1"
+            android:stretchColumns="2"
+            android:id="@+id/itemsTable">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emptyString"
+                    android:id="@+id/header1"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="3dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/healthReportItemsTitle"
+                    android:id="@+id/header2"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="3dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valuesTitle"
+                    android:id="@+id/header3"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="3dp"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registerButtonText"
+            android:id="@+id/okButton"
+            android:onClick="registerHealthReport"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</ScrollView>

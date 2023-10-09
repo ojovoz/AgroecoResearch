@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/measurementLayout"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".enterMeasurement"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/emptyString"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/cropInputTitle"
+            android:textSize="20dp"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterDateText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterDateText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/emptyString"
+            android:id="@+id/dateButton"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCropAgeText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCropAgeText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropAge"
+            android:inputType="number"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCropOriginText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCropOriginText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropOrigin"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCropVarietyText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCropVarietyText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropVariety"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterInputUnitsText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterInputUnitsText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropUnits"
+            android:text="@string/defaultUnits"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCropQuantityText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCropQuantityText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropQuantity"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCropCostText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCropCostText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cropCost"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="20dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enterCommentsText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCommentsText"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/inputComments"
+            android:layout_marginTop="20dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/registerButtonText"
+            android:onClick="registerCrop"
+            android:id="@+id/okButton"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".enterActivity"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emptyString"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/fieldPlotText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingRight="3dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterDateText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterDateText"
+            android:layout_below="@+id/fieldPlotText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/fieldPlotText"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emptyString"
+            android:id="@+id/dateButton"
+            android:layout_below="@+id/enterDateText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterDateText"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterActivityTitle"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterActivityText"
+            android:layout_below="@+id/dateButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/fieldPlotText"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emptyString"
+            android:id="@+id/activityButton"
+            android:onClick="showActivities"
+            android:layout_below="@+id/enterActivityText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterDateText"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterUnitsText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterUnitsText"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/activityButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/dateButton"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityUnits"
+            android:layout_below="@+id/enterUnitsText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterUnitsText"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterActivityValueText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterValueText"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/activityUnits"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/dateButton"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityValue"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/enterValueText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterValueText"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterLaborersText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterLaborersText"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/activityValue"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/activityValue"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityLaborers"
+            android:layout_below="@+id/enterLaborersText"
+            android:inputType="number"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterUnitsText"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterActivityCostText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCostText"
+            android:layout_below="@+id/activityLaborers"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/activityUnits"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityCost"
+            android:layout_below="@+id/enterCostText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterCommentsText"
+            android:singleLine="true"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterCommentsText"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/enterCommentsText"
+            android:layout_below="@+id/activityCost"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/activityUnits"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activityComments"
+            android:layout_below="@+id/enterCommentsText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/enterCommentsText"
+            android:singleLine="true"
+            android:imeOptions="actionDone" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerButtonText"
+            android:id="@+id/okButton"
+            android:onClick="registerActivity"
+            android:layout_below="@+id/activityComments"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@+id/activityComments"
+            android:textSize="20dp"
+            android:height="40dp"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</ScrollView>
